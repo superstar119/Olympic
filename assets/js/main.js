@@ -87,7 +87,9 @@ jQuery(document).ready(function($) {
 	  $('.filter').on('click', function(e) {
 		  e.stopPropagation();
 		  $('.filter-dropdown').removeClass('active');
+      $('.filter').removeClass('active');
 		  $(this).find('.filter-dropdown').toggleClass('active');
+      $(this).toggleClass('active');
 	  })
 	  $(document).click(function (e) {
 		const filter = $(".filter");
@@ -95,6 +97,7 @@ jQuery(document).ready(function($) {
 		//check if the clicked area is dropDown or not
 		if ( filter.has(e.target).length === 0 ) {
 		  $('.filter-dropdown').removeClass('active');
+      $('.filter').removeClass('active');
 		}
 	  })
   })

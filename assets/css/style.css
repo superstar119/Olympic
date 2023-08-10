@@ -579,6 +579,9 @@ article .tcb-plain-text p {
     font-family: "Poppins" !important;
     cursor: pointer;
 }
+.hot-tub-filters .filter.active {
+	border-radius: 6px 6px 0 0;
+}
 .hot-tub-filters .filter:after {
     position: absolute;
     content: "";
@@ -607,26 +610,30 @@ article .tcb-plain-text p {
     min-width: 100%;
     transform-origin: 0 0;
     transform: scaleY(0);
-    border: 1px solid black;
     border-top: none;
     transition: 0.3s;
 }
 .hot-tub-filters .filter .filter-dropdown .option {
-    padding: 7px;
+    padding: 10px 12px;
     text-align: left;
-    font-size: 14px;
-    font-family: red;
-    background-color: white;
+    font-size: 17px;
+    font-family: "Poppins" !important;
+	color: white;
+    background-color: rgb(31, 74, 136);
     text-transform: uppercase;
     white-space: nowrap;
     cursor: pointer;
     transition: 0.3s;
+}
+.hot-tub-filters .filter .filter-dropdown .option:last-child {
+	border-radius: 0 0 6px 6px;
 }
 .hot-tub-filters .filter .filter-dropdown.active {
     transform: scaleY(1);
 }
 
 .hot-tub-filters .filter.active:after {
+	top: 60%;
     transform: translateY(-50%) rotate(-45deg);
 }
 
