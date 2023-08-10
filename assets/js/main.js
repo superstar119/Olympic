@@ -75,5 +75,19 @@ jQuery(document).ready(function($) {
   
       footer.classList.add("custom-footer");
     }
+	  
+	  //Filter
+	  $('.filter').on('click', function(e) {
+		  e.stopPropagation();
+		  $(this).find('.filter-dropdown').toggleClass('active');
+	  })
+	  $(document).click(function (e) {
+		const filter = $(".filter");
+
+		//check if the clicked area is dropDown or not
+		if ( filter.has(e.target).length === 0 ) {
+		  $('.filter-dropdown').removeClass('active');
+		}
+	  })
   })
 });
