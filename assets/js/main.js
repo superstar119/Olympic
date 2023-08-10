@@ -1,14 +1,21 @@
 jQuery(document).ready(function($) {
   $(document).ready(function() {
-
+    var header = document.getElementById('thrive-header'); 
     window.addEventListener('scroll', function() {
-      var header = document.getElementById('thrive-header'); 
       var currentPosition = window.pageYOffset || document.documentElement.scrollTop;
       
       if (currentPosition > 0) {
         header.classList.add('scroll-up');
       } else {
         header.classList.remove('scroll-up');
+      }
+    });
+    window.addEventListener("mousemove", function(event) {
+      var mouseY = event.clientY;
+  
+      if (mouseY <= 100) {
+        header.classList.add('scroll-up');
+		header.style.setProperty('top', '32px', 'important');
       }
     });
     // Get the modal
@@ -79,6 +86,7 @@ jQuery(document).ready(function($) {
 	  //Filter
 	  $('.filter').on('click', function(e) {
 		  e.stopPropagation();
+		  $('.filter-dropdown').removeClass('active');
 		  $(this).find('.filter-dropdown').toggleClass('active');
 	  })
 	  $(document).click(function (e) {
