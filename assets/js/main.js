@@ -13,9 +13,11 @@ jQuery(document).ready(function($) {
     window.addEventListener("mousemove", function(event) {
       var mouseY = event.clientY;
   
-      if (mouseY <= 100) {
-        header.classList.add('scroll-up');
-		header.style.setProperty('top', '32px', 'important');
+      if (mouseY <= 50) {
+        var currentPosition = window.pageYOffset;
+        if(currentPosition > 50)
+          header.classList.add('scroll-up');
+		  header.style.setProperty('top', '32px', 'important');
       }
     });
     // Get the modal

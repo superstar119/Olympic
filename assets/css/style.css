@@ -620,7 +620,6 @@ article .tcb-plain-text p {
     font-family: "Poppins" !important;
 	color: white;
     background-color: rgb(31, 74, 136);
-    text-transform: uppercase;
     white-space: nowrap;
     cursor: pointer;
     transition: 0.3s;
