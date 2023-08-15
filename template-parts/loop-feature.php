@@ -12,7 +12,7 @@ $image_slider = get_field( 'image_slider' );
             'o'  => 'f',
             't'  => 'div',
             'tc' => 'loop-feature__body'
-        )
+        ) 
     );
     ?>
     <div class="loop-feature__image">
