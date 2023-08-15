@@ -10,16 +10,16 @@ jQuery(document).ready(function($) {
         header.classList.remove('scroll-up');
       }
     });
-    window.addEventListener("mousemove", function(event) {
-      var mouseY = event.clientY;
+//     window.addEventListener("mousemove", function(event) {
+//       var mouseY = event.clientY;
   
-      if (mouseY <= 50) {
-        var currentPosition = window.pageYOffset;
-        if(currentPosition > 50)
-          header.classList.add('scroll-up');
-		  header.style.setProperty('top', '32px', 'important');
-      }
-    });
+//       if (mouseY <= 50) {
+//         var currentPosition = window.pageYOffset;
+//         if(currentPosition > 50)
+//           header.classList.add('scroll-up');
+// 		  header.style.setProperty('top', '32px', 'important');
+//       }
+//     });
     // Get the modal
     var modal = document.getElementById('searchModal');
     
@@ -79,11 +79,17 @@ jQuery(document).ready(function($) {
     const currentUrl = window.location.href;
 	  console.log(currentUrl);
   
-    if(currentUrl.includes('experience') || currentUrl.includes('collection') || currentUrl.includes('resource')) {
+    if(currentUrl.includes('experience') || currentUrl.includes('collection') || currentUrl.includes('resource') || currentUrl.includes('hot_tubs')) {
       const footer = document.querySelector('footer');
   
       footer.classList.add("custom-footer");
     }
+
+    //hot tub specification
+    $('.info-right__specs__item.additional-specs').on('click', function() {
+      $(this).toggleClass('active');
+      $(this).find('.specs-item__data').slideToggle('normmal');
+    })
 	  
 	  //Filter
 	  $('.filter').on('click', function(e) {

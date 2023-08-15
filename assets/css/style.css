@@ -103,6 +103,43 @@ header.scroll-up {
 	background: rgb(1, 72, 133) !important;
 }
 
+
+/*------------------------- Button --------------------------*/
+
+.btn {
+	display: block;
+    padding: 15px 50px;
+	width: fit-content;
+    background-color: #1f4a88;
+    font-weight: bold !important;
+    font-family: "Poppins" !important;
+    border-radius: 5px;
+	transition: 0.3s;
+	text-align: center;
+}
+.btn-trans-blue {
+	padding: 15px 20px;
+	font-size: 18px;
+	background-color: white;
+	color: #1f4a88 !important;
+	border: 3px solid #1f4a88;
+}
+.btn:hover {
+    background-color: #3AB4FF;
+    color: white !important;
+}
+.btn-trans-blue:hover {
+	background-color: #1f4a88;
+	color: white;
+}
+.btn-move:hover {
+    transform: translateX(-5px) !important;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
 /* content */
 
 .customer-gallery__wave {
@@ -634,6 +671,229 @@ article .tcb-plain-text p {
 .hot-tub-filters .filter.active:after {
 	top: 60%;
     transform: translateY(-50%) rotate(-45deg);
+}
+
+/*----------------------------------- Product Detail Page -------------------------------*/
+
+.container {
+	margin: auto;
+	padding-inline: 20px;
+}
+
+.hot-tub-intro .container {
+	max-width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+    padding-block: 30px 60px;
+}
+
+.hot-tub-intro .hot-tub-intro__content {
+	width: 50%;
+}
+
+.hot-tub-intro h3 {
+    margin-bottom: 10px !important;
+    font-size: 40px !important;
+    color: #1f4a88 !important;
+}
+.hot-tub-intro .hot-tub-intro__content__text {
+    margin-bottom: 20px;
+}
+
+/*----------------------------------- Hot Tub Simple Specs -------------------------------*/
+.hot-tub-simple-specs {
+    background-image: url("../img/image-41.png");
+}
+
+.hot-tub-simple-specs .container {
+    position: relative;
+    z-index: 2;
+}
+.hot-tub-simple-specs {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hot-tub-simple-specs:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 50, 0.4);
+    z-index: 1;
+}
+
+.hot-tub-simple-specs .container {
+    padding-block: 50px 70px;
+    max-width: 1000px;
+}
+
+.hot-tub-simple-specs .hot-tub-simple-specs__title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: "Poppins" !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 50px !important;
+    z-index: 33333;
+}
+
+.hot-tub-simple-specs .specs-items {
+    display: flex;
+    margin-bottom: 30px !important;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.hot-tub-simple-specs .specs-item h5 {
+    color: white !important;    
+    margin-bottom: 15px !important;
+    text-transform: uppercase !important;
+    font-family: "Poppins" !important;
+    font-size: 22px !important;
+}
+
+.hot-tub-simple-specs .specs-item p {
+    padding-bottom: 0 !important;
+    color: white !important;
+    font-family: "Poppins" !important;
+    font-size: 22px !important;
+}
+.hot-tub-simple-specs .specs-item {
+    margin: 0;
+    padding: 0 30px !important;
+    max-width: 250px;
+    border-right: 1px solid white; 
+}
+
+.hot-tub-features {
+    background: #E7F6FF;
+}
+.hot-tub-features .container {
+    padding-block: 40px 70px;
+}
+.hot-tub-features .hot-tub-features__title {
+    margin-bottom: 30px;
+    font-family: "Poppins" !important;
+    font-size: 55px !important;
+    font-weight: bold !important;
+    color: #1F4A88 !important;
+    text-align: center !important;
+}
+.hot-tub-features .featrues-items {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    gap: 20px;
+}
+.hot-tub-features .loop-feature {
+    height: 400px;
+    width: calc((100% - 40px) / 3);
+    border: 6px solid #B0E0FF;
+    border-radius: 15px;
+}
+.loop-feature .loop-feature__body {
+    display: none !important;
+}
+.loop-feature .loop-feature__name {
+    font-family: "Poppins" !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color: white;
+    text-align: center;
+}
+
+.hot-tub__specification {
+    padding: 250px 0 200px;
+}
+.hot-tub__specification .container {
+    max-width: 1160px;
+}
+.hot-tub__specification .hot-tub__specification__title {
+    font-family: "Poppins" !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    font-size: 55px !important;
+    color: #1F4A88 !important;
+    text-align: center;
+}
+.hot-tub__specification .hot-tub__specification__content {
+    color: black;
+    text-align: center;
+}
+.hot-tub__specification__info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.info-left,.info-right {
+    width: 48%;
+}
+.info-left__image {
+    margin-bottom: 50px;
+}
+.info-left__ctas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    gap: 20px;
+}
+.info-left__cta {
+    width: calc((100% - 20px) / 2) !important;
+}
+
+.info-right__specs {
+    list-style: none;
+}
+
+.info-right__specs .info-right__specs__item {
+    margin-bottom: 15px !important;
+    padding-bottom: 0 !important;
+    border-bottom: 2px solid rgb(230, 230, 230);
+}
+.info-right__specs .info-right__specs__item:last-child {
+    border-bottom: none;
+}
+.info-right__specs .item-title {
+    font-family: "Poppins" !important;
+    font-weight: bold !important;
+}
+.info-right__specs .specs-item__data {
+    font-family: "Poppins" !important;
+    padding-bottom: 15px !important;
+    color: black !important;
+}
+
+.info-right__specs__item.additional-specs {
+    position: relative;
+}
+
+.info-right__specs__item.additional-specs:before {
+    position: absolute;
+    content: '';
+    left: -35px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    border: 6px solid #3ABFFF;
+    border-color: #3ABFFF #3ABFFF transparent transparent;
+    border-radius: 5px;
+    transform: rotate(45deg);
+	transition: 0.3s;
+}
+.info-right__specs__item.additional-specs.active:before {
+	top: 0;
+	transform: rotate(135deg);
+}
+.info-right__specs__item.additional-specs .item-title {
+    margin-bottom: 10px;
+	cursor: pointer;
+}
+.info-right__specs__item.additional-specs .specs-item__data {
+    display: none;
 }
 
 /*----------------------------------- footer -------------------------------*/
