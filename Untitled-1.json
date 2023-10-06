@@ -1,0 +1,47 @@
+/////////// intro tab
+intro_content : tag_line + short_description
+design_my_tub.cabinet_name : interactive_image.combos.cabinet.name
+design_my_tub.cabinet_image : "https://olympichotstag.wpengine.com/wp-content/uploads/2023/08/" + interactive_image.combos.cabinet.media.file_name
+//And to download a cabinet image, use interactive_image.combos.cabinet.media.file_full_url
+
+{
+    design_my_tub.shell_name : interactive_image.combos.shell.name
+    design_my_tub.shell_image : 'https://olympichotstag.wpengine.com/wp-content/uploads/2023/08/' + interactive_image.combos.shell.media.file_name;
+//And to download a cabinet image, use interactive_image.combos.shell.media.file_full_url
+
+    design_my_tub.media_image : 'download url' + interactive_image.combos.media.file_name;    
+//And to download a cabinet image, use interactive_image.combos.media.file_full_url
+
+}
+
+.......... spec tab
+people : spec.groups[0].items[0].value
+dimentions : spec.groups[0].items[1].value
+water_capacity : spec.groups[0].items[2].value
+weight : spec.groups[0].items[3].value
+jets : spec.groups[0].items[4].value
+water_care : spec.groups[0].items[5].value
+seating : spec.groups[0].items[6].value
+additoinal_specs : spec.groups[1].items[0~n].name + spec.groups[1].items[0~n].value
+
+
+..................features
+features[0].image : 
+features[0].title and description : feature.items[0].items[0].description
+//And to download a image, use feature.items[i].items[0].media_items[0].media.file_full_url
+
+
+..........specification
+warranty_cta : spec.footer_buttons[0].url and name : label
+specs_cta : spec.footer_buttons[1].url
+owner_manual_cta : spec.footer_buttons[2].url
+delivery_guide_cta : spec.footer_buttons[3].url
+
+............accessories
+accessories.title : accessories.items[n].title
+accessories.image : accessories.items[n].image
+
+
+
+
+feature image : jet_system.media.file_full_url
