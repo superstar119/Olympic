@@ -139,22 +139,3 @@ function setHotTubName( $product_brand, $title, $product_cap ) {
 	$hotTubName = $product_brand . ' - ' . $newTitle . ' - ' . $product_cap . ' Person';
 	return $hotTubName;
 }
-function get_all_fields_by_prefix( $prefix ) {
-	$result = array();
-
-	// check if ACF plugin is activated
-	if ( is_plugin_active( 'advanced-custom-fields/acf.php' ) ) {
-		$fields = get_fields(); // Retrieve all fields
-
-		foreach ( $fields as $field_name => $field_value ) {
-			if ( strpos( $field_name, $prefix ) === 0 ) {
-				// Field name has the prefix
-				$result[] = array(
-					'field_name'  => $field_name,
-					'field_value' => $field_value,
-				);
-			}
-		}
-	}
-	return $result;
-}
