@@ -65,56 +65,6 @@ add_action( 'wp_enqueue_scripts', 'thrive_theme_child_enqueue_scripts', 10 );
 /* CUSTOM PRODUCT TEMPLATES */
 add_filter( 'template_include', 'product_custom_template', 12 );
 
-function product_custom_template( $template ) {
-
-	global $post;
-	$product_type = get_field( 'product-type', $post->ID );
-	// var_dump( $product_type );
-
-	if ( is_singular( 'product' ) ) {
-
-		$woo_template_path = '';
-
-		if ( $product_type == 'Hot Tub' ) {
-			$woo_template_path = '/woocommerce/single-product-hot-tubs.php';
-		} elseif ( $product_type == 'Watkins Other Products' ) {
-			$woo_template_path = '/woocommerce/single-product-watkins-other.php';
-		} elseif ( $product_type == 'Other CDN Product' ) {
-			$woo_template_path = '/woocommerce/single-produ ct-cdn-other.php';
-		} elseif ( $product_type == 'endless-spa' ) {
-			$woo_template_path = '/woocommerce/single-product-endless.php';
-		} elseif ( $product_type == 'finnleo-sauna' ) {
-			$woo_template_path = '/woocommerce/single-product-finnleo-sauna.php';
-		} elseif ( $product_type == 'finnleo-accessory' ) {
-			$woo_template_path = '/woocommerce/single-product-finnleo-accessory.php';
-		} elseif ( $product_type == 'Other' ) {
-
-			$syndifize_template = '';
-
-			$plugin_name = plugin_basename( 'syndifize/dswaves-plugin.php' );
-
-			if ( is_plugin_active( $plugin_name ) ) {
-				$syndifize_template = WP_PLUGIN_DIR . '/syndifize/templates/woocommerce/single-product.php';
-			}
-
-			if ( ! file_exists( $syndifize_template ) ) {
-				$woo_template_path = '/woocommerce/single-product-other.php';
-			} else {
-				$template = $syndifize_template;
-			}
-		}
-		if ( $woo_template_path ) {
-			$template = get_stylesheet_directory() . $woo_template_path;
-			// check if file exists if not then use the master theme one.
-			if ( ! file_exists( $template ) ) {
-				$template = get_template_directory() . $woo_template_path;
-			}
-		}
-	}
-	// echo $template; exit();
-
-	return $template;
-}
 
 function get_product_categories( $product_id ) {
 	$terms = get_the_terms( $product_id, 'product_cat' );
